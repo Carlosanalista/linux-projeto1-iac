@@ -16,18 +16,19 @@ groupadd GRP_VEN
 groupadd GRP_SEC
 
 echo "Criando os usuários e adicionando nos grupos"
+# -1 criar senhas criptografadas hash MD5
 
-useradd carlos -m -s /bin/bash -p $(openssl passwd Senha123) -G GRP_ADM
-useradd maria -m -s /bin/bash -p $(openssl passwd Senha123) -G GRP_ADM
-useradd joao -m -s /bin/bash -p $(openssl passwd Senha123) -G GRP_ADM
+useradd carlos -m -s /bin/bash -p $(openssl passwd -1 Senha123) -G GRP_ADM
+useradd maria -m -s /bin/bash -p $(openssl passwd -1 Senha123) -G GRP_ADM
+useradd joao -m -s /bin/bash -p $(openssl passwd -1 Senha123) -G GRP_ADM
 
-useradd debora -m -s /bin/bash -p $(openssl passwd Senha123) -G GRP_VEN
-useradd sebastiana -m -s /bin/bash -p $(openssl passwd Senha123) -G GRP_VEN
-useradd roberto -m -s /bin/bash -p $(openssl passwd Senha123) -G GRP_VEN
+useradd debora -m -s /bin/bash -p $(openssl passwd -1 Senha123) -G GRP_VEN
+useradd sebastiana -m -s /bin/bash -p $(openssl passwd -1 Senha123) -G GRP_VEN
+useradd roberto -m -s /bin/bash -p $(openssl passwd -1 Senha123) -G GRP_VEN
 
-useradd josefina -m -s /bin/bash -p $(openssl passwd Senha123) -G GRP_SEC
-useradd amanda -m -s /bin/bash -p $(openssl passwd Senha123) -G GRP_SEC
-useradd rogerio -m -s /bin/bash -p $(openssl passwd Senha123) -G GRP_SEC
+useradd josefina -m -s /bin/bash -p $(openssl passwd -1 Senha123) -G GRP_SEC
+useradd amanda -m -s /bin/bash -p $(openssl passwd -1 Senha123) -G GRP_SEC
+useradd rogerio -m -s /bin/bash -p $(openssl passwd -1 Senha123) -G GRP_SEC
 
 echo "Indicando o dono dos grupos e dando permissões aos diretórios"
 
